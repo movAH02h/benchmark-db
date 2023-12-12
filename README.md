@@ -14,9 +14,8 @@
   * *ALTER TABLE <имя таблицы> ALTER COLUMN tpep_pickup_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
   * *ALTER TABLE <имя таблицы> ALTER COLUMN tpep_dropoff_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
    
-- При импорте в .db из csv файла нужно поменять название столбца Airport_fee или удалить его вообще, т.к. там находятся NULL.
-	  Он выдает ошибку, потому что airport_fee (предпоследний столбец) = Airport_fee (последний столбец):
-	  df.columns = [*df.columns[:-1], 'last_fee'] -> перед командой to_sql
+- При импорте в .db из csv файла нужно поменять название столбца Airport_fee или удалить его вообще, т.к. там находятся NULL. Он выдает ошибку, потому что airport_fee (предпоследний столбец) = Airport_fee (последний столбец):
+  	* df.columns = [*df.columns[:-1], 'last_fee'] -> перед командой to_sql
   
 - Для duckdb лучше использовать отдельный файл .duckdb, чтобы не подключать сторонние штучки по типу sqlite_scanner
   
