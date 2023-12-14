@@ -29,6 +29,6 @@
 
 - Файлы баз данных .db и .duckdb не "залил" на git
 
-- Примерно так выглядел набор файлов:
-- ![image](https://github.com/movAH02h/benchmark-db/assets/122667404/fd975e91-646e-449f-be71-6dca34530341)
+- Примерно так выглядел набор файлов: <br />
+ ![image](https://github.com/movAH02h/benchmark-db/assets/122667404/fd975e91-646e-449f-be71-6dca34530341)
 
