@@ -10,9 +10,9 @@
      
 - Загрузить pgadmin для работы с postgreSQL
   
-- После импорта csv файла в pgadmin столбцы с датами имеют тип TEXT. Нужно поменять этот тип на TIMETAMP without timezone для работы ф-ии EXTRACT:
-  * *ALTER TABLE <имя таблицы> ALTER COLUMN tpep_pickup_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
-  * *ALTER TABLE <имя таблицы> ALTER COLUMN tpep_dropoff_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
+- После импорта csv файла в pgadmin столбцы с датами имеют тип TEXT. Нужно поменять этот тип на TIMETAMP without timezone для работы ф-ии EXTRACT. "users" - имя таблицы:
+  * *ALTER TABLE users ALTER COLUMN tpep_pickup_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
+  * *ALTER TABLE users ALTER COLUMN tpep_dropoff_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
    
 - При импорте в .db из csv файла нужно поменять название столбца Airport_fee или удалить его вообще, т.к. там находятся NULL. Он выдает ошибку, потому что airport_fee (предпоследний столбец) = Airport_fee (последний столбец):
   	* df.columns = [*df.columns[:-1], 'last_fee'] -> перед командой to_sql
