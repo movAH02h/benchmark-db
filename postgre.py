@@ -78,9 +78,8 @@ def fourthQuery():
     cursor.close()
     connection.close()
 
-for i in range(10):
-    firstQuery()
-    secondQuery()
-    thirdQuery()
-    fourthQuery()
-    print('---------------------------------')
+
+firstQuery()
+secondQuery()
+thirdQuery()
+fourthQuery()
