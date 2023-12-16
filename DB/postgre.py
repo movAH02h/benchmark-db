@@ -69,8 +69,7 @@ def fourthQuery():
                      count(*)
                     FROM task
                     GROUP BY 1, 2, 3
-                    ORDER BY 2, 4 desc;
-''')
+                    ORDER BY 2, 4 desc; ''')
     end = time.time()
 
     print(end - start)
@@ -78,9 +77,7 @@ def fourthQuery():
     cursor.close()
     connection.close()
 
-for i in range(10):
-    firstQuery()
-    secondQuery()
-    thirdQuery()
-    fourthQuery()
-    print('---------------------------------')
+firstQuery()
+secondQuery()
+thirdQuery()
+fourthQuery()
