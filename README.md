@@ -10,7 +10,7 @@
      
 - Загрузить pgadmin для работы с postgreSQL
   
-- После импорта csv файла в pgadmin столбцы с датами имеют тип TEXT. Нужно поменять этот тип на TIMETAMP without timezone для работы ф-ии EXTRACT. "users" - имя таблицы:
+- После импорта csv файла в pgadmin столбцы с датами имеют тип TEXT. Нужно поменять этот тип на TIMESTAMP without timezone для работы ф-ии EXTRACT. "users" - имя таблицы:
   * *ALTER TABLE users ALTER COLUMN tpep_pickup_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
   * *ALTER TABLE users ALTER COLUMN tpep_dropoff_datetime type TIMESTAMP USING create_time::TIMESTAMP;*
    
